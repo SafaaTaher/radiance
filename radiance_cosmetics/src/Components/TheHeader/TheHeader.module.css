@@ -1,0 +1,125 @@
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            color: #2d2d2d;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #d4a574 0%, #c17d5f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            padding: 0.6rem 2.5rem 0.6rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            width: 200px;
+            transition: all 0.3s;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: #c17d5f;
+            width: 250px;
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 8px;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            color: #c17d5f;
+            transition: transform 0.2s;
+        }
+
+        .search-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .lang-toggle {
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #d4a574 0%, #c17d5f 100%);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: transform 0.2s;
+        }
+
+        .lang-toggle:hover {
+            transform: scale(1.05);
+        }
+
+        body[dir="rtl"] {
+            font-family: 'Cairo', 'Tahoma', sans-serif;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2d2d2d;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #c17d5f;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #c17d5f;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
